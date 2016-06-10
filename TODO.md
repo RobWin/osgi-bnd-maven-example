@@ -88,3 +88,5 @@ Oomph model.. (Maven: how to e.g. get .project re-created in ./ and in conf/ ?)
 https://github.com/bndtools/bndtools/wiki/JARs,-Bundles,-&-Packages
 
 branch gradle, and remove all gradle from master
+
+test.sh should ideally somehow really integration test the OSGi bundle JAR it produced
