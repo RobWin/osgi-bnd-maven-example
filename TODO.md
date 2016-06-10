@@ -1,6 +1,5 @@
 
-osgi-felix-launcher
-
+slf4j dep
 read http://enroute.osgi.org/tutorial_maven/050-start.html
 
 pom.xml reading bnd.bnd
@@ -9,15 +8,16 @@ pom.xml reading bnd.bnd
 mvn install and run in fresh Felix or Equinox (from repo or via file:/// ?)
 branch gradle, and remove all gradle from master
 
-slf4j dep
+bundle:watch
+
 bnd.bnd -buildpath vs. pom.xml
 https://github.com/bndtools/bndtools/wiki/Changes-in-3.1.0#bnd-indexer-maven-plugin ?
 
 Test
 
-https://github.com/pkriens/org.openhab.binding/blob/master/cnf/build.bnd ?
+Agent, with Karaf! https://github.com/osgi/osgi.enroute/tree/master/cnf/distro/biz.aQute.remote.agent and source on https://github.com/bndtools/bnd/tree/master/biz.aQute.remote
 
-Agent! https://github.com/osgi/osgi.enroute/tree/master/cnf/distro/biz.aQute.remote.agent and source on https://github.com/bndtools/bnd/tree/master/biz.aQute.remote
+https://github.com/pkriens/org.openhab.binding/blob/master/cnf/build.bnd ?
 
 src/test how-to? Needs to be on classpath, but not in JAR...
 
