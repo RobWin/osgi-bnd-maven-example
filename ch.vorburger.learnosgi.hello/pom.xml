@@ -1,45 +1,47 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>ch.vorburger.learnosgi</groupId>
-  <artifactId>hello</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+	<groupId>ch.vorburger.learnosgi</groupId>
+	<artifactId>hello</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.osgi</groupId>
-      <artifactId>org.osgi.core</artifactId>
-      <version>5.0.0</version>
-    </dependency>
-  </dependencies>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <version>3.0.0</version>
-        <extensions>true</extensions>
-        <executions>
-          <execution>
-            <id>default-bundle</id>
-            <phase>package</phase>
-            <goals>
-              <goal>bundle</goal>
-            </goals>
-            <configuration>
-              <instructions>
-<!--
-                <Bundle-Name>ch.vorburger.learnosgi.hello</Bundle-Name>
-                <Private-Package>ch.vorburger.learnosgi.hello</Private-Package>
-                <Bundle-Activator>ch.vorburger.learnosgi.hello.Activator</Bundle-Activator>
- -->
-              </instructions>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
+	<dependencies>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+			<version>5.0.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>3.0.0</version>
+				<extensions>true</extensions>
+				<executions>
+					<execution>
+						<id>default-bundle</id>
+						<phase>package</phase>
+						<goals>
+							<goal>bundle</goal>
+						</goals>
+						<configuration>
+							<instructions>
+								<!-- <Bundle-Name>ch.vorburger.learnosgi.hello</Bundle-Name> <Private-Package>ch.vorburger.learnosgi.hello</Private-Package>
+									<Bundle-Activator>ch.vorburger.learnosgi.hello.Activator</Bundle-Activator> -->
+							</instructions>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
