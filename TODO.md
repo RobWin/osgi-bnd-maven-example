@@ -1,5 +1,4 @@
 
-can run using PDE ?
 bndrun ?
 
 test Gradle build
