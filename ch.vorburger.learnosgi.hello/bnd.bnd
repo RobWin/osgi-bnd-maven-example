@@ -1,0 +1,9 @@
+Bundle-Activator: ch.vorburger.learnosgi.hello.Activator
+Private-Package: ch.vorburger.learnosgi.hello
+
+# -sourcepath: src/main/java
+#-sources: src/main/java
+src: src/main/java, src/main/resources, src/test/java, src/test/resources
+bin: target/classes
+
+-runee: JavaSE-1.8

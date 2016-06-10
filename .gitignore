@@ -1,0 +1,14 @@
+# Eclipse
+.metadata
+.settings/
+.project
+.classpath
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+
+# BND
+generated/
