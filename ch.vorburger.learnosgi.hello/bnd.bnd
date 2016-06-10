@@ -1,3 +1,4 @@
+# TODO Bundle-Version: ${project.version}
 Bundle-Name: ${project.groupId}.${project.artifactId}
 Bundle-Activator: ch.vorburger.learnosgi.hello.Activator
 Private-Package: ch.vorburger.learnosgi.hello

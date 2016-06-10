@@ -45,7 +45,7 @@ bndtools-users: JAR built by Maven built has Export-Package: ch.vorburger.learno
 
 https://groups.google.com/forum/#!topic/bndtools-users/6b7es7GOaQ0: conf not in WS with .metadata how to? Re-conf in new workspace after project move?  http://enroute.osgi.org/tutorial_base/200-workspace.html -- another disadvantage is also that you cannot create an Eclipse project to edit the files at the root (I mean e.g. README, .gitignore & Co.)
 
-version ? pom.xml -VS- "Bundle-Version:1.0.0.${tstamp}" in bnd.bnd
+version ? pom.xml -VS- "Bundle-Version:1.0.0.${tstamp}" in bnd.bnd .. also mismatch in target/ JAR filename due to pom.xml <version> vs. (lack of) Bundle-Version in bnd.bnd; TODO make this in bnd.bnd work: Bundle-Version: ${project.version}
 
 How to get in-IDE build by bndtools to correctly replace "Bundle-Name: ${project.groupId}.${project.artifactId}" in bnd, like mvn CLI build?
 
