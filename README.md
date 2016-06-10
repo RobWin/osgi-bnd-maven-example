@@ -14,6 +14,7 @@ Contrary to https://github.com/osgi/osgi.enroute.examples.maven, this is an exam
 Notes
 -----
 
+* mvn install hapens automatically, from IDE, all the time, no more manually needed
 * Dependencies, e.g. osgi.core, are in bnd.bnd's -buildpath: and NOT in *.gradle or pom.xml
 * Run felix.bndrun to see it hot auto-reloads change to any used bundle
 * See EquinoxExampleLaunch.launch, just as an example, to explain (problem: Target Platform in p2 format instead of from Maven)
