@@ -1,6 +1,4 @@
 
-bndrun ?
-
 test Gradle build
 pom.xml reading bnd.bnd
 	https://github.com/cschneider/osgi-chat/blob/master/pom.xml
