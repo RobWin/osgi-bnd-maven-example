@@ -1,0 +1,6 @@
+# required for Maven build to not do default Bundle-Name: ${project.artifactId}
+# NOTE that JAR built in-IDE by bndtools do NOT correctly replace this, only the build
+Bundle-Name: ${project.groupId}.${project.artifactId}
+
+src: src/main/java, src/main/resources, src/test/java, src/test/resources
+bin: target/classes

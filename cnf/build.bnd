@@ -1,34 +1,38 @@
 # Configure Repositories
--plugin.1.Central: \
+-plugin.4.Central: \
 	aQute.bnd.deployer.repository.wrapper.Plugin; \
 		location = "${build}/cache/wrapper"; \
 		reindex = true, \
-	aQute.bnd.jpm.Repository; \
-		includeStaged = true; \
-		name = Central; \
-		location = ~/.bnd/shacache; \
-		index = ${build}/central.json
+	aQute.bnd.repository.maven.provider.MavenBndRepository; \
+		releaseUrl = https://repo.maven.apache.org/maven2/; \
+		name = Central
+#   ^^^ http://enroute.osgi.org/tutorial_maven/310-central
 
--plugin.2.Local: \
-	aQute.bnd.deployer.repository.LocalIndexedRepo; \
-		name = Local; \
-		pretty = true; \
-		local = ${build}/local
+-plugin.6.Local: \
+	aQute.bnd.repository.maven.provider.MavenBndRepository; \
+		name = Local
+# This makes it always automatically deploys into the local repo from the IDE
+-buildrepo: Local
 
--plugin.3.Templates: \
-	aQute.bnd.deployer.repository.LocalIndexedRepo; \
-		name = Templates; \
-		pretty = true; \
-		local = ${build}/templates
+#-plugin.3.Templates: \
+#	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+#		name = Templates; \
+#		pretty = true; \
+#		local = ${build}/templates
 
--plugin.4.Release: \
-	aQute.bnd.deployer.repository.LocalIndexedRepo; \
-		name = Release; \
-		pretty = true; \
-		local = ${build}/release
+# TODO later http://enroute.osgi.org/tutorial_maven/360-ci ??  & http://enroute.osgi.org/tutorial_maven/350-nexus
+#
+#-plugin.4.Release: \
+#	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+#		name = Release; \
+#		pretty = true; \
+#		local = ${build}/release
 
--releaserepo: Release
--baselinerepo: Release
+#-releaserepo: Release
+#-baselinerepo: Release
+
+# Do NOT use -pom: from http://enroute.osgi.org/tutorial_maven/320-local
+# (because real-world pom.xml are more complex than examples, and in projects with existing pom.xml those should take precendence over auto. gen. ones)
 
 # JUnit
 junit: org.apache.servicemix.bundles.junit; version=4.12

@@ -1,0 +1,6 @@
+org.osgi:org.osgi.core:5.0.0
+org.osgi:org.osgi.core:6.0.0
+com.google.guava:guava:19.0
+commons-math:commons-math:1.2
+dnsjava:dnsjava:2.1.1
+org.apache.felix:org.apache.felix.framework:bundle:5.4.0
