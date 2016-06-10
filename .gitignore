@@ -12,4 +12,5 @@ target/
 
 # BND
 generated/
+cnf/cache/
 cnf/templates/
