@@ -1,16 +1,19 @@
 
-test Gradle build
+osgi-felix-launcher
+
+read http://enroute.osgi.org/tutorial_maven/050-start.html
+
 pom.xml reading bnd.bnd
 	https://github.com/cschneider/osgi-chat/blob/master/pom.xml
 	https://github.com/apache/aries-rsa
 mvn install and run in fresh Felix or Equinox (from repo or via file:/// ?)
 branch gradle, and remove all gradle from master
 
-read http://enroute.osgi.org/tutorial_maven/050-start.html
-
 slf4j dep
 bnd.bnd -buildpath vs. pom.xml
 https://github.com/bndtools/bndtools/wiki/Changes-in-3.1.0#bnd-indexer-maven-plugin ?
+
+Test
 
 https://github.com/pkriens/org.openhab.binding/blob/master/cnf/build.bnd ?
 
@@ -22,7 +25,7 @@ src/test how-to? Needs to be on classpath, but not in JAR...
 
 
 
-https://groups.google.com/forum/#!topic/bndtools-users/6b7es7GOaQ0: conf not in WS with .metadata how to? Re-conf in new workspace after project move?  http://enroute.osgi.org/tutorial_base/200-workspace.html
+https://groups.google.com/forum/#!topic/bndtools-users/6b7es7GOaQ0: conf not in WS with .metadata how to? Re-conf in new workspace after project move?  http://enroute.osgi.org/tutorial_base/200-workspace.html -- another disadvantage is also that you cannot create an Eclipse project to edit the files at the root (I mean e.g. README, .gitignore & Co.)
 
 put project into sub-directory like in ODL.. note
 http://enroute.osgi.org/tutorial_base/200-workspace.html "A bnd workspace is flat, the cnf directory and all project directories must reside in exactly the same parent directory, which is the workspace directory. Sorry, no exceptions."
