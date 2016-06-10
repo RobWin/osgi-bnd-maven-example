@@ -2,10 +2,14 @@ Bundle-Name: ${project.groupId}.${project.artifactId}
 Bundle-Activator: ch.vorburger.learnosgi.hello.Activator
 Private-Package: ch.vorburger.learnosgi.hello
 
-# -sourcepath: src/main/java
-#-sources: src/main/java
-src: src/main/java, src/main/resources, src/test/java, src/test/resources
-bin: target/classes
+-plugin.maven = aQute.bnd.plugin.maven.MavenPlugin
+-outputmask = ${@bsn}-${version;===S;${@version}}.jar
+src=src/main/java,src/main/resources
+bin=target/classes
+testsrc=src/test/java,src/test/resources
+testbin=target/test-classes
+target-dir=target
+-includeresource: src/main/resources
 
 -runee: JavaSE-1.8
 -buildpath: osgi.core;version=6.0

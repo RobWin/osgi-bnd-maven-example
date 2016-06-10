@@ -27,7 +27,7 @@ Agent, with Karaf! https://github.com/osgi/osgi.enroute/tree/master/cnf/distro/b
 
 https://github.com/pkriens/org.openhab.binding/blob/master/cnf/build.bnd ?
 
-src/test how-to? Needs to be on classpath, but not in JAR...
+src/main|test/resources how-to?!
 
 Try to put project into sub-directory like in ODL.. note
 http://enroute.osgi.org/tutorial_base/200-workspace.html "A bnd workspace is flat, the cnf directory and all project directories must reside in exactly the same parent directory, which is the workspace directory. Sorry, no exceptions."
