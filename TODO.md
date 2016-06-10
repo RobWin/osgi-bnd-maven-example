@@ -1,17 +1,17 @@
 
-slf4j dep
+JAR built by Maven built has Export-Package: ch.vorburger.learnosgi.hello despite Private-Package: ch.vorburger.learnosgi.hello in bnd.bnd ?!?  (The JAR built by bndtools and Gradle instead has not export)
+
+JAR built by Maven built Bundle-Name: hello whereas the JAR built by bndtools and Gradle instead has Bundle-Name: ch.vorburger.learnosgi.hello
+
 read http://enroute.osgi.org/tutorial_maven/050-start.html
-
-pom.xml reading bnd.bnd
-	https://github.com/cschneider/osgi-chat/blob/master/pom.xml
-	https://github.com/apache/aries-rsa
-mvn install and run in fresh Felix or Equinox (from repo or via file:/// ?)
-branch gradle, and remove all gradle from master
-
-bundle:watch
 
 bnd.bnd -buildpath vs. pom.xml
 https://github.com/bndtools/bndtools/wiki/Changes-in-3.1.0#bnd-indexer-maven-plugin ?
+
+slf4j dep
+
+What is the <obrRepository>NONE</obrRepository> in https://github.com/cschneider/osgi-chat/blob/master/pom.xml good for?
+
 
 Test
 
@@ -78,3 +78,4 @@ Oomph model.. (Maven: how to e.g. get .project re-created in ./ and in conf/ ?)
 
 https://github.com/bndtools/bndtools/wiki/JARs,-Bundles,-&-Packages
 
+branch gradle, and remove all gradle from master

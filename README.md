@@ -15,4 +15,5 @@ Notes
 * Run felix.bndrun to see it hot auto-reloads change to any used bundle
 * See EquinoxExampleLaunch.launch, just as an example, to explain (problem: Target Platform in p2 format instead of from Maven)
 * ./gradlew build => generated/*.jar (NOT in build/)
-* Karaf demo: Start, log:tail, copy built JAR into deploy/, bundle:list, bundle:stop ch.vorburger.learnosgi.hello, bundle:start ch.vorburger.learnosgi.hello
+* Karaf demo 1: Start, log:tail, copy built JAR into deploy/, bundle:list, bundle:stop ch.vorburger.learnosgi.hello, bundle:start ch.vorburger.learnosgi.hello
+* Karaf demo 2: bundle:install -s mvn:ch.vorburger.learnosgi/hello/0.0.1-SNAPSHOT; make change, mvn install - change is hot auto-reloaded!  (bundle:watch ch.vorburger.learnosgi.hello is NOT required - I think?)

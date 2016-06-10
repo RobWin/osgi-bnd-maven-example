@@ -35,8 +35,8 @@
 						</goals>
 						<configuration>
 							<instructions>
-								<!-- <Bundle-Name>ch.vorburger.learnosgi.hello</Bundle-Name> <Private-Package>ch.vorburger.learnosgi.hello</Private-Package>
-									<Bundle-Activator>ch.vorburger.learnosgi.hello.Activator</Bundle-Activator> -->
+								<_include>bnd.bnd</_include>
+								<!-- <_include>-bnd.bnd</_include>, note the '-' prefix, would mean not to log/stop if there is no bnd.bnd -->
 							</instructions>
 						</configuration>
 					</execution>
