@@ -7,6 +7,9 @@ I'd like ODL to eventually adopt Gradle, but that will be a separate project, so
 Originally initiated by Michael Vorburger.ch (@ work @ Red Hat),
 together with Kai Kreuzer, during Unconference day at EclipseCon France 2016.
 
+Contrary to https://github.com/osgi/osgi.enroute.examples.maven, this is an example of a Maven instead Gradle-based build.
+(The osgi.enroute.examples.maven is an example of a Maven instead BND repo, but with a Gradle build.)
+
 
 Notes
 -----

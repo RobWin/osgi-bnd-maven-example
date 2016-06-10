@@ -1,8 +1,4 @@
 
-JAR built by Maven built has Export-Package: ch.vorburger.learnosgi.hello despite Private-Package: ch.vorburger.learnosgi.hello in bnd.bnd ?!?  (The JAR built by bndtools and Gradle instead has not export)
-
-JAR built by Maven built Bundle-Name: hello whereas the JAR built by bndtools and Gradle instead has Bundle-Name: ch.vorburger.learnosgi.hello
-
 read http://enroute.osgi.org/tutorial_maven/050-start.html
 
 bnd.bnd -buildpath vs. pom.xml
@@ -21,18 +17,21 @@ https://github.com/pkriens/org.openhab.binding/blob/master/cnf/build.bnd ?
 
 src/test how-to? Needs to be on classpath, but not in JAR...
 
-
-
-
-
-https://groups.google.com/forum/#!topic/bndtools-users/6b7es7GOaQ0: conf not in WS with .metadata how to? Re-conf in new workspace after project move?  http://enroute.osgi.org/tutorial_base/200-workspace.html -- another disadvantage is also that you cannot create an Eclipse project to edit the files at the root (I mean e.g. README, .gitignore & Co.)
-
-put project into sub-directory like in ODL.. note
+Try to put project into sub-directory like in ODL.. note
 http://enroute.osgi.org/tutorial_base/200-workspace.html "A bnd workspace is flat, the cnf directory and all project directories must reside in exactly the same parent directory, which is the workspace directory. Sorry, no exceptions."
 
 M2E co-habitation?! Maven Dependencies Classpath container NOK.. Complete uninstall M2E makes transition difficult and would remove useful Run As Maven launchers.
 
 
+git push osgi-bnd-maven-example
+
+
+
+
+bndtools-users: JAR built by Maven built has Export-Package: ch.vorburger.learnosgi.hello despite Private-Package: ch.vorburger.learnosgi.hello in bnd.bnd ?!?  (The JAR built by bndtools and Gradle instead has not export)
+
+
+https://groups.google.com/forum/#!topic/bndtools-users/6b7es7GOaQ0: conf not in WS with .metadata how to? Re-conf in new workspace after project move?  http://enroute.osgi.org/tutorial_base/200-workspace.html -- another disadvantage is also that you cannot create an Eclipse project to edit the files at the root (I mean e.g. README, .gitignore & Co.)
 
 
 
@@ -48,10 +47,6 @@ share bnd.bnd stuff between the 2 projects.  Classpath container? Close / re-ope
 share bnd.bnd stuff between separate repos how-to? Must be via Maven dependency not SCM URL.  Check out https://github.com/rkrzewski/bnd-multilevel-examples/tree/master/workspace-cnf-nested.  Create bnd-maven-example2 Git repo.
 
 branch with bnd-maven-plugin from http://njbartlett.name/2015/03/27/announcing-bnd-maven-plugin.html instead of maven-bundle-plugin; note pro/con
-
-Bundle-SymbolicName automated from pom.xml.. how to with maven-bundle-plugin?  With bnd-maven-plugin see https://github.com/bndtools/bndtools/wiki/Changes-in-3.0.0#bnd-maven-plugin-changes POM properties can be used in the bnd.bnd file, e.g. "${project.groupId}.${project.artifactId}" BUT https://github.com/bndtools/bndtools/wiki/Changes-in-3.0.0#known-issues "The new feature of the bnd-maven-plugin to support POM properties in bnd files was broken just before release." ;)
-
-git push osgi-bnd-maven-example
 
 blog
 
