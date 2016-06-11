@@ -9,7 +9,7 @@ How NOT to manually maintain central.mvn ?
 
 ____
 
-merge /cnf/ext/base.bnd with /cnf/build.bnd
+[branch] merge /cnf/ext/base.bnd with /cnf/build.bnd
 
 https://github.com/bndtools/bndtools/wiki/Changes-in-3.1.0#bnd-indexer-maven-plugin ?
 
@@ -27,15 +27,13 @@ Agent, with Karaf! https://github.com/osgi/osgi.enroute/tree/master/cnf/distro/b
 
 https://github.com/pkriens/org.openhab.binding/blob/master/cnf/build.bnd ?
 
-src/main|test/resources how-to?!
+src/main|test/resources how-to?!  With a a test...
 
 Try to put project into sub-directory like in ODL.. note
 http://enroute.osgi.org/tutorial_base/200-workspace.html "A bnd workspace is flat, the cnf directory and all project directories must reside in exactly the same parent directory, which is the workspace directory. Sorry, no exceptions."
 
 M2E co-habitation?! Maven Dependencies Classpath container would disappear if there were no <dependencies> BUT the M2E Extension will not add the "Bnd Bundle Path" classpath container by itself; so TODO write M2E extension. (FYI: Complete uninstall M2E makes transition difficult and would remove useful Run As Maven launchers.  FYI Commiting .project/.classpath in git is, understandably, frowned up in ODL.)
 
-
-git push osgi-bnd-maven-example
 
 
 
@@ -49,12 +47,12 @@ version ? pom.xml -VS- "Bundle-Version:1.0.0.${tstamp}" in bnd.bnd .. also misma
 
 How to get in-IDE build by bndtools to correctly replace "Bundle-Name: ${project.groupId}.${project.artifactId}" in bnd, like mvn CLI build?
 
-
+Releasing (releases) - how to combine UI & CI for correct Semantic Versioning?  Note http://enroute.osgi.org/tutorial_maven/360-ci is quite empty..
 
 
 New BND OSGi project wizard
 
-pom.xml at root, multi module
+pom.xml at root, multi module.  Something like my very old https://github.com/vorburger/osgi-eclipse-sampleutorial
 
 share bnd.bnd stuff between the 2 projects.  Classpath container? Close / re-open projects handled via workspace dependency resolution à la M2E?
 
@@ -87,6 +85,8 @@ Oomph model.. (Maven: how to e.g. get .project re-created in ./ and in conf/ ?)
 
 https://github.com/bndtools/bndtools/wiki/JARs,-Bundles,-&-Packages
 
-branch gradle, and remove all gradle from master
+branch gradle, and remove all gradle from master?  Or keep, to showcase both approaches are interop?
 
 test.sh should ideally somehow really integration test the OSGi bundle JAR it produced
+
+http://enroute.osgi.org/qs/050-start.html
